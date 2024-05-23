@@ -3,9 +3,10 @@ import db from "./db.js";
 
 import bodyParser from "body-parser";
 import MenuItem from "./models/Menu.js";
+require('dotenv').config();
 
 const app=express();
-const port=4000;
+const PORT=process.env.PORT || 4000;    
 
 app.use(bodyParser.json());
 
@@ -20,6 +21,8 @@ import router from "./routes/personRoutes.js";
 // use the routers
 app.use('/person',router);
 
-app.listen(port,()=>{
+
+
+app.listen(PORT,()=>{
     console.log('listening to port 3000!');
 })

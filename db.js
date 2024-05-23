@@ -1,10 +1,9 @@
 import mongoose from "mongoose";
 
-// mongodb://localhost:27017/
-// this is my connection string
+
 
 // define mongoDB URL
-const mongoURL='mongodb://localhost:27017/hotels'
+const mongoURL=process.env.MONGODB_URL;
 
 
 // set mongoDB connection
