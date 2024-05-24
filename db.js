@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 
 
 // define mongoDB URL
-const mongoURL=process.env.MONGODB_URL;
+// const mongoURL=process.env.MONGODB_URL;
 
 
 // set mongoDB connection
-mongoose.connect(mongoURL)
+mongoose.connect("mongodb://localhost:27017/hotels");
 
 
 // object represting mongoose connection
